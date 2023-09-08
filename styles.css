@@ -1,0 +1,91 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(./assets/tic.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+.game-info{
+    color: rgb(26, 218, 205);
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(18, 2, 33, 0.941);
+    border-radius: 1rem;
+    border: 1px solid rgba(212, 197, 197, 0.854);
+    padding: 0.5rem 3rem;
+    font-weight: 900;
+}
+
+.tic-tac-toe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(75, 9, 50, 0.838);
+    border-radius: 1rem;
+    border: 1px solid rgba(248, 247, 247, 0.916);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3, .box6{
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8{
+    border-right: 2px solid white;
+}
+
+
+.btn{
+    color: rgb(8, 201, 185);
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(14, 6, 27, 0.973);
+    border-radius: 1rem;
+    border: 1px solid rgba(214, 187, 187, 0.936);
+    padding: 0.5rem 2rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: none;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
